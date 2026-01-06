@@ -11,10 +11,12 @@
             <button type="submit"> Somar</button>
         </form>
 
-        <div class="result-display">
+        <!-- Essa forma gasta menos codigo mas nao e tao facil de lembrar -->
+        <div class="result-display" *ngIf="resultado" > 
             <p>Seu resultado esta abaixo:</p>
         </div>
 
+        <!-- Essa ja e mais facil de lembrar porem gasta mais codigo e tambem e possivel usar o @else -->
         @if(resultado){
             <div class="result-display">
                 <p>Resultado: <span id="result">{{ resultado }}</span></p>
